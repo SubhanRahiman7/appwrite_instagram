@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import appwriteService from "../appwrite/config";
 import {Container, PostCard} from '../components'
 import { setPosts, setLoading, setError } from '../store/postSlice'
+import conf from '../conf/conf.js'
 
 function Home() {
     const dispatch = useDispatch()
@@ -13,6 +14,11 @@ function Home() {
         async function loadPosts() {
             dispatch(setLoading(true));
             try {
+                // Check if Appwrite is configured
+                if (!conf.appwriteUrl || !conf.appwriteProjectId) {
+                    throw new Error('Appwrite is not configured. Please check your environment variables.');
+                }
+                
                 const data = await appwriteService.getPosts();
                 if (data && data.documents) {
                     dispatch(setPosts(data.documents));
