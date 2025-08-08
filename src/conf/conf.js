@@ -8,11 +8,12 @@ const conf = {
 
 // Debug logging for production
 console.log('=== APPWRITE CONFIG DEBUG ===');
-console.log('VITE_APPWRITE_URL:', import.meta.env.VITE_APPWRITE_URL);
-console.log('VITE_APPWRITE_PROJECT_ID:', import.meta.env.VITE_APPWRITE_PROJECT_ID);
-console.log('conf.appwriteUrl:', conf.appwriteUrl);
-console.log('conf.appwriteProjectId:', conf.appwriteProjectId);
+console.log('Raw VITE_APPWRITE_COLLECTION_ID:', import.meta.env.VITE_APPWRITE_COLLECTION_ID);
+console.log('Raw VITE_APPWRITE_COLLECTION_ID type:', typeof import.meta.env.VITE_APPWRITE_COLLECTION_ID);
+console.log('Raw VITE_APPWRITE_COLLECTION_ID length:', import.meta.env.VITE_APPWRITE_COLLECTION_ID?.length);
 console.log('conf.appwriteCollectionId:', conf.appwriteCollectionId);
+console.log('conf.appwriteCollectionId type:', typeof conf.appwriteCollectionId);
+console.log('conf.appwriteCollectionId length:', conf.appwriteCollectionId.length);
 console.log('============================');
 
 // Check if environment variables are properly configured
