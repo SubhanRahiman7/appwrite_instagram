@@ -4,37 +4,5 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
-  ],
-  "redirects": [
-    {
-      "source": "/login",
-      "destination": "/index.html",
-      "permanent": false
-    },
-    {
-      "source": "/signup",
-      "destination": "/index.html",
-      "permanent": false
-    },
-    {
-      "source": "/all-posts",
-      "destination": "/index.html",
-      "permanent": false
-    },
-    {
-      "source": "/add-post",
-      "destination": "/index.html",
-      "permanent": false
-    },
-    {
-      "source": "/post/:slug",
-      "destination": "/index.html",
-      "permanent": false
-    },
-    {
-      "source": "/edit-post/:slug",
-      "destination": "/index.html",
-      "permanent": false
-    }
   ]
 }
